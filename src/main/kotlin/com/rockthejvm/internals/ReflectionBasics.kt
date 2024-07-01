@@ -45,7 +45,10 @@ object ReflectionBasics {
         val properties = personClass.declaredMemberProperties
         println("----------- Class properties -----------")
         properties.forEach { property ->
-            println("Name: ${property.name}, type: ${property.returnType.classifier}, is nullable: ${property.returnType.isMarkedNullable}")
+            println("Name: ${property.name}" +
+                    "Type: ${property.returnType.classifier}" +
+                    "Nullable: ${property.returnType.isMarkedNullable}"
+            )
         }
 
         // refer to a particular property (at RUNTIME) on an instance
