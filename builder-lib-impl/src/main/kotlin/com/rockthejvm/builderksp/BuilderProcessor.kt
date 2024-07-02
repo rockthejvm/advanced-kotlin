@@ -72,7 +72,7 @@ class BuilderProcessor(private val generator: CodeGenerator) : SymbolProcessor {
                 }
              */
             writer.write("  fun build(): $className { \n")
-            writer.write("    return $className\n")
+            writer.write("    return $className(\n")
             properties.forEachIndexed { index, prop ->
                 val propName = prop.simpleName.asString()
                 writer.write("      $propName = $propName ?: throw IllegalArgumentException(\"$propName must be provided!\")")

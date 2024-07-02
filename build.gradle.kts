@@ -13,8 +13,8 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-    implementation(":builder-lib-annotations")
-    implementation(":builder-lib-impl")
+    implementation(project(":builder-lib-annotations"))
+    implementation(project(":builder-lib-impl"))
     ksp(project(":builder-lib-impl"))
 }
 
